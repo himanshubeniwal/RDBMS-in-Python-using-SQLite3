@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep  5 18:25:56 2018
+
+@author: Himanshu Beniwal
+"""
+
 import sqlite3
 # Connecting to database 
 def connecting():
@@ -60,10 +67,12 @@ def updating():
     conn.close()
 
 def deleting_table():
+    print( "Deleting Table After using")
     con = sqlite3.connect("test.db")
     con.execute("DROP TABLE COMPANY")
     con.commit()
     con.close()
+    print( "Operation done successfully")
 
 def deleting_item():
     conn = sqlite3.connect('test.db')
@@ -93,20 +102,21 @@ def inserting_item_back():
        print ("ADDRESS = ", row[2])
        print ("SALARY = ", row[3], "\n")
     conn.close()
-'''
-print("\t\nCreating Table Now ~!~!~!~!~!")
+
+print("\t\t\nCreating Table Now ~!~!~!~!~!")
 creating_table()
-print("\t\nInserting values in table Now ~!~!~!~!~!")
+print("\t\t\nInserting values in table Now ~!~!~!~!~!")
 inserting_values()
-print("\t\nSelecting Table Now ~!~!~!~!~!")
+print("\t\t\nSelecting Table Now ~!~!~!~!~!")
 selecting()
-print("\t\nUpdating Table Now ~!~!~!~!~!")
+print("\t\t\nUpdating Table Now ~!~!~!~!~!")
 updating()
-print("\t\nDeleting Item Now ~!~!~!~!~!")
+print("\t\t\nDeleting Item Now ~!~!~!~!~!")
 deleting_item()
-print("\t\nInserting Item Back Now ~!~!~!~!~!")
+print("\t\t\nInserting Item Back Now ~!~!~!~!~!")
 inserting_item_back()
-'''
+print("\t\t\nDeleting Table Now ~!~!~!~!~!")
+deleting_table()
 '''    EXPORTING DATA INTO CSV FILES!!!!! 
 conn = sqlite3.connect('test.db')
 print( "Opened database successfully")
