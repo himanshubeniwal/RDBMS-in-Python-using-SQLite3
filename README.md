@@ -1,3 +1,6 @@
+# Relation Data Base Management System in Python using SQLite3
+## What this Project is about:
+Functions for manipulating the Relational Database Management System like Creating, Inserting, Updating, Deleting an item, Deleting Table, using SQLite3 in Python.
 ## Function name:
 connecting() ~~~~ creating connection with database<br />
 creating_table() ~~~~~ to create a table<br />
